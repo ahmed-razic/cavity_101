@@ -34,7 +34,7 @@ divSchemes
 
 laplacianSchemes
 {
-    default             Gauss linear orhtogonal;
+    default             Gauss linear orthogonal;
 }
 
 interpolationSchemes

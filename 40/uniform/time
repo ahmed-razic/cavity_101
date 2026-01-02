@@ -8,32 +8,23 @@
 FoamFile
 {
     format      ascii;
-    class       volVectorField;
-    location    "0";
-    object      U;
+    class       dictionary;
+    location    "40/uniform";
+    object      time;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform (0 0 0);
+beginTime       0;
 
-boundaryField
-{
-    movingWall
-    {
-        type    fixedValue;
-        value   uniform (1 0 0);
-    }
+value           40;
 
-    fixedWalls
-    {
-        type    fixedValue;
-        value   uniform (0 0 0);
-    }
+name            "40";
 
-    frontAndBack
-    {
-        type    empty;
-    }
-}
+index           4;
+
+deltaT          10;
+
+deltaT0         10;
+
+
 // ************************************************************************* //
