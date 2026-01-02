@@ -8,23 +8,13 @@
 FoamFile
 {
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      controlDict;
+    class       labelList;
+    note        "nPoints: 12 nCells: 2 nFaces: 11 nInternalFaces: 1";
+    location    "constant/polyMesh";
+    object      neighbour;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-/*
-startFrom       startTime;
-
-startTime       0;
-
-stopAt          endTime;
-
-endTime         50;
-*/
-deltaT          10;
-
-writeInterval   1;
+1(1)
 
 // ************************************************************************* //
