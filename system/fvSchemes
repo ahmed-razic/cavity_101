@@ -14,5 +14,37 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+ddtSchemes
+{
+    default             backward;
+}
+
+gradSchemes
+{
+    default             Gauss linear;
+    grad(p)             Gauss linear;
+}
+
+divSchemes
+{
+    default                         none;
+    div(phi,U)                      Gauss linear;
+    div(nuEff*dev2(T(grad(U))))     Gauss linear;
+}
+
+laplacianSchemes
+{
+    default             Gauss linear orhtogonal;
+}
+
+interpolationSchemes
+{
+    default             linear;
+}
+
+snGradSchemes
+{
+    default             orthogonal;
+}
 
 // ************************************************************************* //
